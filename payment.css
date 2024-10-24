@@ -1,0 +1,334 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", -apple-system, system-ui, sans-serif;
+    background: #107C10;
+    min-height: 100vh;
+    line-height: 1.5;
+    color: #1b1b1b;
+}
+
+.main-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1rem;
+}
+
+/* Game Purchase Header */
+.game-purchase-header {
+    background: #1a1a1a;
+    padding: 2rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    width: 100%;
+    max-width: 600px;
+}
+
+.game-info {
+    display: flex;
+    gap: 1.5rem;
+    align-items: start;
+}
+
+.game-cover {
+    width: 120px;
+    height: auto;
+    border-radius: 4px;
+}
+
+.game-details {
+    color: #fff;
+}
+
+.game-details h1 {
+    font-size: 24px;
+    margin-bottom: 0.5rem;
+}
+
+.game-subtitle {
+    color: #999;
+    font-size: 14px;
+    margin-bottom: 1rem;
+}
+
+.price-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.original-price {
+    color: #999;
+    text-decoration: line-through;
+    font-size: 14px;
+}
+
+.current-price {
+    color: #107C10;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.discount-tag {
+    color: #fff;
+    font-size: 14px;
+}
+
+/* Payment Card Styles */
+.form-container {
+    background: #1a1a1a;
+    border-radius: 8px;
+    padding: 2rem;
+    color: #fff;
+    width: 100%;
+    max-width: 600px;
+}
+
+.step-indicator {
+    margin-bottom: 2rem;
+    color: #999;
+}
+
+.form-section {
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #333;
+}
+
+.form-section:last-child {
+    border-bottom: none;
+}
+
+.form-section h3 {
+    margin-bottom: 1.5rem;
+    font-size: 18px;
+    color: #fff;
+}
+
+.card-icons {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.card-icons img {
+    height: 24px;
+}
+
+.form-row {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* Input Groups */
+.input-group {
+    margin-bottom: 1.5rem;
+    position: relative;
+    flex: 1;
+}
+
+.input-group label {
+    display: block;
+    color: #fff;
+    font-size: 14px;
+    margin-bottom: 0.5rem;
+}
+
+.input-group input,
+.input-group select {
+    width: 100%;
+    height: 41px;
+    padding: 0.75rem;
+    background: #1B1B1B;
+    border: 1px solid #404040;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 15px;
+    transition: all 0.2s ease;
+}
+
+.input-group input:focus,
+.input-group select:focus {
+    border-color: #107C10;
+    outline: none;
+}
+
+/* Error States */
+.input-group.error input,
+.input-group.error select {
+    border-color: #FF0000;
+    border-width: 2px;
+}
+
+.error-text {
+    display: none;
+    color: #FF0000;
+    font-size: 12px;
+    margin-top: 0.5rem;
+}
+
+/* Purchase Summary */
+.purchase-summary {
+    background: #2d2d2d;
+    padding: 1.5rem;
+    border-radius: 4px;
+    margin: 2rem 0;
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    color: #fff;
+}
+
+.summary-row:last-child {
+    margin-bottom: 0;
+}
+
+.summary-row.discount .summary-value {
+    color: #107C10;
+}
+
+.summary-row.total {
+    border-top: 1px solid #404040;
+    padding-top: 1rem;
+    margin-bottom: 0;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+/* Button Styles */
+.button-primary {
+    background: #107C10;
+    color: #fff;
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.2s;
+}
+
+.button-primary:hover {
+    background: #0B5C0B;
+}
+
+.button-primary:disabled {
+    background: #0B5C0B;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+/* Loading Spinner */
+.loading-spinner {
+    display: none;
+    position: absolute;
+    right: 2.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
+    border: 2px solid #f3f3f3;
+    border-top: 2px solid #107C10;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: translateY(-50%) rotate(0deg); }
+    100% { transform: translateY(-50%) rotate(360deg); }
+}
+
+/* Meta Info Styles */
+.meta-info {
+    color: #999;
+    font-size: 14px;
+    margin-bottom: 0.5rem;
+}
+
+.rating {
+    color: #fff;
+}
+
+.badges {
+    background: rgba(255, 255, 255, 0.1);
+    display: inline-block;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 12px;
+    margin-top: 0.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .game-purchase-header {
+        padding: 1rem;
+    }
+
+    .game-info {
+        flex-direction: column;
+    }
+
+    .game-cover {
+        width: 100%;
+        max-width: 200px;
+        margin: 0 auto;
+    }
+
+    .form-container {
+        padding: 1rem;
+    }
+
+    .purchase-summary {
+        padding: 1rem;
+    }
+}
+
+/* Utility Classes */
+.hidden {
+    display: none;
+}
+
+/* Select Element Custom Styling */
+.input-group select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8' fill='none'%3E%3Cpath d='M1 1L6 6L11 1' stroke='white' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    padding-right: 2.5rem;
+}
+
+.input-group select:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.error-text {
+    animation: fadeIn 0.2s ease-out;
+}

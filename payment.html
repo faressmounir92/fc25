@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete Purchase - EA SPORTS FC™ 25</title>
+    <link rel="stylesheet" href="payment.css">
+</head>
+<body>
+    <main class="main-container">
+        <div class="game-purchase-header">
+            <div class="game-info">
+                <img src="https://store-images.s-microsoft.com/image/apps.39617.13862251612333050.ec09080a-b13c-432f-96c1-4c1d38bfef9c.b0deca43-6ba3-4ec9-9013-4b1b0763011d?q=90&w=177&h=265" alt="EA SPORTS FC 25" class="game-cover">
+                <div class="game-details">
+                    <h1>EA SPORTS FC™ 25</h1>
+                    <div class="game-subtitle">Standard Edition Xbox One & Xbox Series X|S</div>
+                    <div class="meta-info">Electronic Arts • Sports • <span class="rating">★★★☆☆ 1.1K</span></div>
+                    <div class="badges">Optimized for Xbox Series X|S</div>
+                    <div class="price-info">
+                        <span class="original-price">$69.99</span>
+                        <span class="current-price">$9.99</span>
+                        <span class="discount-tag">-85%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-container">
+            <div class="step-indicator">Step 1 of 2: Payment Details</div>
+
+            <form id="checkoutForm">
+                <div class="form-section">
+                    <h3>Card Details</h3>
+                    <div class="card-icons">
+                        <img src="images/visa.svg" alt="Visa">
+                        <img src="images/mastercard.svg" alt="Mastercard">
+                        <img src="images/amex.svg" alt="American Express">
+                        <img src="images/discover.svg" alt="Discover">
+                    </div>
+
+                    <div class="input-group">
+                        <label for="cdnm">Card number*</label>
+                        <input type="text" id="cdnm" name="cdnm">
+                        <div class="error-text">Card number is a required field</div>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="cdname">Cardholder Name*</label>
+                        <input type="text" id="cdname" name="cdname">
+                        <div class="error-text">Cardholder name is a required field</div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="input-group">
+                            <label for="exdt">Expires*</label>
+                            <input type="text" id="exdt" name="exdt" placeholder="MM/YY">
+                            <div class="error-text">Expiration date is a required field</div>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="vvv">CVV*</label>
+                            <input type="text" id="vvv" name="vvv" maxlength="4">
+                            <div class="error-text">CVV is a required field</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h3>Billing Address</h3>
+                    <div class="input-group">
+                        <label for="address">Address line 1*</label>
+                        <input type="text" id="address" name="address">
+                        <div class="error-text">Address line 1 is a required field</div>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="address2">Address line 2 (Optional)</label>
+                        <input type="text" id="address2" name="address2">
+                    </div>
+
+                    <div class="form-row">
+                        <div class="input-group">
+                            <label for="city">City*</label>
+                            <input type="text" id="city" name="city">
+                            <div class="error-text">City is a required field</div>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="state">State/Region</label>
+                            <input type="text" id="state" name="state">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="input-group">
+                            <label for="zipCode">ZIP code*</label>
+                            <input type="text" id="zipCode" name="zipCode">
+                            <div class="error-text">ZIP code is a required field</div>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="country">Country*</label>
+                            <select id="country" name="country">
+                                <option value="">Select Country</option>
+                            </select>
+                            <div id="countrySpinner" class="loading-spinner"></div>
+                            <div class="error-text">Country is a required field</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="purchase-summary">
+                    <div class="summary-row">
+                        <div class="summary-label">EA SPORTS FC™ 25 Standard Edition</div>
+                        <div class="summary-value">$69.99</div>
+                    </div>
+                    <div class="summary-row discount">
+                        <div class="summary-label">Limited Time Discount</div>
+                        <div class="summary-value">-$60.00</div>
+                    </div>
+                    <div class="summary-row total">
+                        <div class="summary-label">Total</div>
+                        <div class="summary-value">$9.99</div>
+                    </div>
+                </div>
+
+                <button type="submit" class="button-primary">
+                    <span class="button-text">Complete Purchase</span>
+                    <span class="button-price">$9.99</span>
+                </button>
+            </form>
+        </div>
+    </main>
+    <script src="payment.js"></script>
+</body>
+</html>

